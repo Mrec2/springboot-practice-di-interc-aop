@@ -23,7 +23,7 @@ public class EventRepositoryImpl implements EventRepository{
 	@Override
 	public Event getEventById(Long id) {
 		
-		return null;
+		return events.stream().filter(e->e.getId().equals(id)).findFirst().orElseThrow();
 	}
 
 }
